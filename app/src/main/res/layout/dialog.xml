@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capacidad"
+            android:id="@+id/txtvw_inf"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantidad almacenada: N"
+            android:id="@+id/txtvw_inf2"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_below="@+id/txtvw_inf"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selecciona"
+            android:id="@+id/txtvw"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_below="@+id/txtvw_inf2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/max"
+            android:id="@+id/txtvw2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtvw"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:padding="5dp"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtvw2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:progress="10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:id="@+id/txtvw_estado"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_below="@+id/seekBar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/min"
+            android:id="@+id/txtvw4"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtvw_estado"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:padding="5dp"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar2"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtvw4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:max="10"
+            android:progress="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/txtvw_estado2"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_below="@+id/seekBar2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_aceptar"
+            android:text="@string/aceptar"
+            android:layout_below="@+id/txtvw_estado2"
+            android:layout_toLeftOf="@+id/txtvw_estado2"
+            android:layout_toStartOf="@+id/txtvw_estado2" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cancelar"
+            android:text="@string/cancelar"
+            android:layout_below="@+id/txtvw_estado2"
+            android:layout_toRightOf="@+id/txtvw_estado2"
+            android:layout_toEndOf="@+id/txtvw_estado2" />
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

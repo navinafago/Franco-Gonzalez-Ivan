@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduce un nombre para tu empresa:"
+            android:id="@+id/txtvwnombre"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:padding="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtnombre"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_below="@+id/txtvwnombre"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btncontinuar"
+            android:text="Continuar"
+            android:layout_below="@+id/edtxtnombre"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
