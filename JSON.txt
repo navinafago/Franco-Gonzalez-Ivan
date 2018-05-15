@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a string into a function.</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var text = '{ "isan":"function() {precio=20000; if(precio<75098.87){tasa=0.02; isan=precio*tasa;} else {isan=precio} return isan;}"}';
+var obj = JSON.parse(text);
+obj.isan = eval("(" + obj.isan + ")");
+
+document.getElementById("demo").innerHTML = obj.isan(); 
+
+
+
+</script>
+
+</body>
+</html>

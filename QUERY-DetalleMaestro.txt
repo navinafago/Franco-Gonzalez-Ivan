@@ -1,0 +1,12 @@
+SELECT COUNT * FROM tabla WHERE C1=1;
+SELECT COUNT * FROM tabla;
+
+SELECT COUNT * FROM TABLA WHERE C1=A and C2 =1;
+SELECT COUNT * FROM TABLA WHERE C1=A:
+
+SELECT COUNT * FROM detalle  WHERE nbdetalle=detalle1m1 and id_maestro in (SELECT id_maestro FROM id_maestro WHERE nbmaestro=maestro1);
+
+Select count * from detalle where id_maestro (SELECT id_maestro FROM id_maestro WHERE nbmaestro=maestro1);
+
+SELECT COUNT FROM detalle WHERE nbdetalle=detalle1m1 and tipo_detalle=sencillo and id_maestro=in (SELECT id_maestro FROM id_maestro WHERE nbmaestro=maestro1);
+SELECT COUNT FROM detalle WHERE nbdetalle=detalle1m1 and id_maestro in (SELECT id_maestro FROM id_maestro WHERE nbmaestro=maestro1);

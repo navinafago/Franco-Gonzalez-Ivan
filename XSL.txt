@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="//ontologia">
+  <xsl:apply-templates/>
+</xsl:template>
+
+<xsl:template match="ideal">
+  <xsl:value-of select="@nbideal"/> 
+  <xsl:apply-templates select="atributos"/>
+  <xsl:apply-templates select="metodos"/>
+</xsl:template>
+<xsl:template match="atributos"> 
+  <xsl:apply-templates select="atributo"/>
+</xsl:template>
+
+<xsl:template match="atributo"> 
+  <xsl:value-of select="@nbatributo"/>
+</xsl:template>
+
+<xsl:template match="metodos">
+  <xsl:apply-templates select="metodo"/>
+</xsl:template>
+
+<xsl:template match="metodo">
+  function <xsl:value-of select="@nbmetodo"/> ()  {
+<xsl:apply-templates select="asignacion"/>
+<xsl:apply-templates select="decision"/>
+}
+</xsl:template>
+
+<xsl:template match="asignacion">
+ <xsl:value-of select="variable"/> =
+ <xsl:value-of select="operando"/> ;
+</xsl:template>
+
+
+
+<xsl:template match="decision">
+if (<xsl:value-of select="condicion"/> 
+<xsl:apply-template select="verdadero"/>
+<xsl:apply-template select="falso"/>
+</xsl:template>
+
+<xsl:template match="verdadero">
+else { <xsl:apply-template select="verdadero"/>}
+</xsl:template>
+
+<xsl:template match="falso">
+{ <xsl:apply-template select="falso"/>}
+</xsl:template>
+</xsl:stylesheet>

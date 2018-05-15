@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<algoritmo>
+<variables>
+<max>entero</max>
+<plan>float</plan>
+<cu>entero</cu>
+</variables>
+
+<pedido>
+	<variable>catidad</variable>
+	<variable>precio</variable>
+        <variable>tpedido</variable>
+        <variable>tentrega</variable>
+        <variable>tprog</variable>
+“Cantidad”:”100” <- Json
+“precio”:”
+<asignacion>
+          <variable>ocupacion</variable>
+          <operando>Q/max</operando>
+</asignacion>
+<asignacion>
+          <variable>utilidad</variable>
+          <operando>(precio-cu)/cu</operando>
+</asignacion>
+<asignacion>
+          <variable>desv</variable>
+          <operando>tentrega - tprog</operando>
+</asignacion>	
+<variable>I</variable>  I 
+<ciclo tipo=”for++” var=I>
+<decision>
+      <condicion> max*plan >= sumaQ</condicion>
+	    <verdadero>
+		<condicion> util[i]=util[i+1] </condicion>
+		       <verdadero> 
+			      <condicion>tentrega[i] menor que tentrega[i+1]	</condicion>
+				    <verdadero> 
+					 <asignacion>
+						<variable>Temp</variable>
+							<operando>ProgTentrega[i]</operando>
+					 </asignacion>
+				    </verdadero>
+				    <falso>
+					<asignacion>
+						<variable>Temp</variable>
+							<operando>ProgTentrega[i+1]</operando>
+					</asignacion>
+				    </falso>
+				    <falso>
+					<condicion> util[i] mayor[util[i+1] </condicion>
+						<verdadero>
+						    <asignacion>
+					                <variable>Temp</variable>
+					                     <operando>ProgUtil[i]</operando>
+				                    </asignacion>
+			                        </verdadero>
+			                        <falso>
+				                     <asignacion>
+					                <variable>Temp</variable>
+					                     <operando>ProgUtil[i+1]</operando>
+				                     </asignacion>
+			                        </falso>
+                                    </falso>
+                                    <falso>
+	                                 <condicion> util[i]=util[i+1] </condicion>
+				             <verdadero> 
+				                   <condicion>cantidad[i]*precio[i] menor que cantidad[i+1]*precio[i+1]</condicion>
+					                <verdadero> 
+						              <asignacion>
+							           <variable>Temp</variable>
+							                 <operando>ProgTentrega[i]</operando>
+						              </asignacion>
+                                                        </verdadero>
+                                                        <falso>
+                                                             <asignacion>
+							          <variable>Temp</variable>
+							               <operando>ProgTentrega[i+1]</operando>
+						                            </asignacion>
+                                                        </falso>
+                                                        <falso>
+	                                                      <condicion> util[i] mayor[util[i+1] </condicion>
+                                                                   <verdadero>
+	                                                                 <asignacion>
+					                                      <variable>Temp</variable>
+					                                             <operando>ProgUtil[i]</operando>
+				                                         </asignacion>
+			                                           </verdadero>
+			                                           <falso>
+				                                        <asignacion>
+					                                     <variable>Temp</variable>
+					                                           <operando>ProgUtil[i+1]</operando>
+				                                        </asignacion>
+			                                           </falso>
+                                                        </falso>
+                                    </falso>
+</decision>
+</ciclo>
+</pedido>
+</algoritmo>

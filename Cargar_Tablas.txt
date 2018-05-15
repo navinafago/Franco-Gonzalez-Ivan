@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mercado>
+  <industrias>
+    <idindustria primaria="si">entero</idindustria>
+    <nbindustria>texto</nbindustria>
+  </industrias>
+
+  <empresas>
+    <idempresa primaria="si">entero</idempresa>
+    <nbempresa>texto</nbempresa>
+    <idindustria foranea="si">entero</idindustria>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </empresas>
+
+  <encadenamientos>
+    <idindustriacompradora primaria="si">entero</idindustriacompradora>
+    <idindustriavendedora primaria="si">entero</idindustriavendedora>
+    <coeficiente>entero</coeficiente>
+  </encadenamientos>
+
+  <solicitudes>
+    <idsolicitud primaria="si">entero</idsolicitud>
+    <idindustria foranea="si">entero</idindustria>
+    <fecentregasol>fecha</fecentregasol>
+    <idindustriacompradora foranea="si">entero</idindustriacompradora>
+    <cantsolicitada>entero</cantsolicitada>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </solicitudes>
+
+  <nivelesvariables>
+    <idempresa primaria="si">entero</idempresa>
+    <idalmacen primaria="si">entero</idalmacen>
+    <deseado>entero</deseado>
+    <actual>entero</actual>
+    <minimodeseado>entero</minimodeseado>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </nivelesvariables>
+
+  <pagos>
+    <idpago primaria="si">entero</idpago>
+    <idoperacion foranea="si">entero</idoperacion>
+    <cantidadpagada>decimal</cantidadpagada>
+    <fecpago>fecha</fecpago>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </pagos>
+
+  <reglascompensacion>
+    <idregla primaria="si">entero</idregla>
+    <nbregla>texto</nbregla>
+  </reglascompensacion>
+
+  <empresaspenalizadas>
+    <idempresa primaria="si">entero</idempresa>
+    <idregla primaria="si">entero</idregla>
+    <idempresavictima primaria="si">entero</idempresavictima>
+    <notificado>entero</notificado>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </empresaspenalizadas>
+  
+  <almacenes>
+    <idalmacen primaria="si">entero</idalmacen>
+    <idempresa>entero</idempresa>
+    <nbalmacen>texto</nbalmacen>
+    <idtipoalmacen>entero</idtipoalmacen>
+    <maxalmacen>entero</maxalmacen>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </almacenes>
+
+  <balances>
+    <idempresa primaria="si">entero</idempresa>
+    <fecbalance primaria="si">fecha</fecbalance>
+    <idcuenta>entero</idcuenta>
+    <saldo>decimal</saldo>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </balances>
+  
+  <compras>
+    <idcompra primaria="si">entero</idcompra>
+    <idcotizacion>entero</idcotizacion>
+    <feccompra>fecha</feccompra>
+    <liquidada>entero</liquidada>
+    <entregada>entero</entregada>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </compras>
+  
+  <comprasoperaciones>
+    <idoperacion primaria="si">entero</idoperacion>
+    <idtipooperacion>entero</idtipooperacion>
+    <idcompra>entero</idcompra>
+    <idempresacompradora>entero</idempresacompradora>
+    <idempresavendedora>entero</idempresavendedora>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </comprasoperaciones>
+
+  <cotizaciones>
+    <idcotizacion primaria="si">entero</idcotizacion>
+    <idsolicitud>entero</idsolicitud>
+    <cantofrecida>entero</cantofrecida>
+    <precio>decimal</precio>
+    <fecexpiracion>fecha</fecexpiracion>
+    <fecentrega>fecha</fecentrega>
+    <estado>entero</estado>
+    <idempresavendedora>entero</idempresavendedora>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </cotizaciones>
+
+  <embarques>
+    <idembarque primaria="si">entero</idembarque>
+    <idoperacion>entero</idoperacion>
+    <cantidadembarcada>entero</cantidadembarcada>
+    <fecembarque>fecha</fecembarque>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </embarques>
+
+  <cuentas>
+    <idcuenta primaria="si">entero</idcuenta>
+    <nbcuenta>texto</nbcuenta>
+    <acreedora>entero</acreedora>
+  </cuentas>
+
+  <tipoalmacen>
+    <idtipoalmacen primaria="si">entero</idtipoalmacen>
+    <nbtipoalmacen>texto</nbtipoalmacen>
+  </tipoalmacen>
+  
+  <ultimasincronizacion>
+    <id primaria="si">entero</id>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </ultimasincronizacion>
+  
+  <usuariosempresas>
+    <idusuario primaria="si">entero</idusuario>
+    <idempresa>entero</idempresa>
+  </usuariosempresas>
+  
+  <tipooperaciones>
+    <idtipooperaciones primaria="si">entero</idtipooperaciones>
+    <nbtipooperaciones>texto</nbtipooperaciones>
+  </tipooperaciones>
+  
+  <usuarios>
+    <idusuario primaria="si">entero</idusuario>
+    <noboleta>texto</noboleta>
+    <contraseña>texto</contraseña>
+    <nombre>texto</nombre>
+    <apepaterno>texto</apepaterno>
+    <apematerno>texto</apematerno>
+    <grupo>texto</grupo>
+    <fecha_sincronizacion>fecha</fecha_sincronizacion>
+  </usuarios>
+  
+  <instancias>
+   <industrias>
+   <idindustria>1</idindustria>
+   <nbindustria>A</nbindustria>
+  </industrias>
+
+  <industrias>
+    <idindustria>2</idindustria>
+    <nbindustria>B</nbindustria>
+  </industrias>
+
+  <empresas>
+    <idempresa></idempresa>
+    <nbempresa></nbempresa>
+    <idindustria></idindustria>
+    <fecha_sincronizacion>  </fecha_sincronizacion>
+  </empresas>
+
+  <encadenamientos>
+    <idindustriacompradora></idindustriacompradora>
+    <idindustriavendedora></idindustriavendedora>
+    <coeficiente></coeficiente>
+  </encadenamientos>
+
+  <solicitudes>
+    <idsolicitud></idsolicitud>
+    <idindustria></idindustria>
+    <fecentregasol></fecentregasol>
+    <idindustriacompradora></idindustriacompradora>
+    <cantsolicitada></cantsolicitada>
+    <fecha_sincronizacion></fecha_sincronizacion>
+  </solicitudes>
+ 
+  <nivelesvariables>
+    <idempresa></idempresa>
+    <idalmacen></idalmacen>
+    <deseado></deseado>
+    <actual></actual>
+    <minimodeseado></minimodeseado>
+    <fecha_sincronizacion></fecha_sincronizacion>
+  </nivelesvariables>
+
+  <pagos>
+    <idpago></idpago>
+    <idoperacion></idoperacion>
+    <cantidadpagada></cantidadpagada>
+    <fecpago></fecpago>
+    <fecha_sincronizacion></fecha_sincronizacion>
+  </pagos>
+
+  <reglascompensacion>
+    <idregla></idregla>
+    <nbregla></nbregla>
+  </reglascompensacion>
+
+  <empresaspenalizadas>
+    <idempresa ></idempresa>
+    <idregla ></idregla>
+    <idempresavictima ></idempresavictima>
+    <notificado></notificado>
+    <fecha_sincronizacion></fecha_sincronizacion>
+  </empresaspenalizadas>
+
+  <almacenes>
+    <idalmacen></idalmacen>
+    <idempresa></idempresa>
+    <nbalmacen></nbalmacen>
+    <idtipoalmacen></idtipoalmacen>
+    <maxalmacen></maxalmacen>
+    <fecha_sincronizacion></fecha_sincronizacion>
+  </almacenes>
+
+  <balances>
+   <idempresa></idempresa>
+   <fecbalance></fecbalance>
+   <idcuenta></idcuenta>
+   <saldo></saldo>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </balances>
+
+  <compras>
+   <idcompra></idcompra>
+   <idcotizacion></idcotizacion>
+   <feccompra></feccompra>
+   <liquidada></liquidada>
+   <entregada></entregada>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </compras>
+
+  <comprasoperaciones>
+   <idoperacion></idoperacion>
+   <idtipooperacion></idtipooperacion>
+   <idcompra></idcompra>
+   <idempresacompradora></idempresacompradora>
+   <idempresavendedora></idempresavendedora>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </comprasoperaciones>
+ 
+  <cotizaciones>
+   <idcotizacion ></idcotizacion>
+   <idsolicitud></idsolicitud>
+   <cantofrecida></cantofrecida>
+   <precio></precio>
+   <fecexpiracion></fecexpiracion>
+   <fecentrega></fecentrega>
+   <estado></estado>
+   <idempresavendedora></idempresavendedora>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </cotizaciones>
+
+  <embarques>
+   <idembarque></idembarque>
+   <idoperacion></idoperacion>
+   <cantidadembarcada></cantidadembarcada>
+   <fecembarque></fecembarque>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </embarques>
+  
+  <cuentas>
+   <idcuenta></idcuenta>
+   <nbcuenta></nbcuenta>
+   <acreedora></acreedora>
+  </cuentas>
+ 
+  <tipoalmacen>
+   <idtipoalmacen></idtipoalmacen>
+   <nbtipoalmacen></nbtipoalmacen>
+  </tipoalmacen>
+  
+  <ultimasincronizacion>
+   <id></id>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </ultimasincronizacion>
+  
+  <usuariosempresas>
+   <idusuario></idusuario>
+   <idempresa></idempresa>
+  </usuariosempresas>
+  
+  <tipooperaciones>
+   <idtipooperaciones></idtipooperaciones>
+   <nbtipooperaciones></nbtipooperaciones>
+  </tipooperaciones>
+    
+  <usuarios>
+   <idusuario></idusuario>
+   <noboleta></noboleta>
+   <contraseña></contraseña>
+   <nombre></nombre>
+   <apepaterno></apepaterno>
+   <apematerno></apematerno>
+   <grupo></grupo>
+   <fecha_sincronizacion></fecha_sincronizacion>
+  </usuarios>
+ 
+</instancias>
+</mercado>

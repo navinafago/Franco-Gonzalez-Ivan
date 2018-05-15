@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xloco>
+    <usuario nbusuario="profe">
+        <ontologia nbontologia="contador">
+            <ideal nbideal="isan">
+	       	<atributos>
+                    <atributo nbatributo="precio" tipo="decimal"/>
+                    <atributo nbatributo="liminf" tipo="decimal"/>
+                    <atributo nbatributo="limsup" tipo="decimal"/>
+                    <atributo nbatributo="tasa" tipo="decimal"/>
+                    <atributo nbatributo="fija" tipo="decimal"/>
+                    <atributo nbatributo="isan" tipo="decimal"/>
+ 		</atributos>
+  		<metodos>
+                    <metodo nbmetodo="calcuar isan">
+                        <asignacion>
+                            <variable>precio</variable>
+                            <operando>200000</operando>
+                        </asignacion>
+                        <decision>
+                            <condicion> precio <75098.87)</condicion>
+                            <verdadero>
+                                <metodo nbmetodo="nivel 1">
+                                    <asignacion>
+                                        <variable>tasa</variable>
+                                        <operando>.02</operando>
+                                    </asignacion>
+                                    <asignacion>
+                                        <variable>fija</variable>
+                                        <operando>0.00</operando>
+                                    </asignacion>
+                                    <asignacion>
+                                        <variable>liminferior</variable>
+                                        <operando>0.01</operando>
+                                    </asignacion>
+                                    <asignacion>
+                                        <variable>limsuperior</variable>
+                                        <operando>75098.87</operando>
+                                    </asignacion>
+                                </metodo>
+                            </verdadero>
+                            <falso>   completa el proceso </falso>
+			</decision>
+		     </metodo>
+		</metodos>
+	    </ideal>
+	</ontologia>
+    </usuario>
+</xloco>
